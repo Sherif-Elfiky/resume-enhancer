@@ -3,8 +3,6 @@
 <head>
   <title>AI Resume Enhancer</title>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-  
-
 </head>
 <body>
   <h2>Upload Your Resume (PDF) + Job Description</h2>
@@ -26,8 +24,6 @@
         <li>{{ s }}</li>
       {% endfor %}
     </ul>
-    <h4>Extracted Resume Text:</h4>
-    <pre>{{ resume_text }}</pre>
   {% endif %}
 </body>
 </html>
