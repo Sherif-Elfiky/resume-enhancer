@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Resume Enhancer</title>
+</head>
+<body>
+  <h2>Upload Your Resume (PDF) + Job Description</h2>
+  <form method="POST" enctype="multipart/form-data">
+    <label>Job Title / Description:</label><br>
+    <textarea name="job_desc" rows="5" cols="50"></textarea><br><br>
+
+    <label>Upload Resume PDF:</label><br>
+    <input type="file" name="resume"><br><br>
+
+    <input type="submit" value="Analyze Resume">
+  </form>
+
+  {% if score %}
+    <h3>Match Score: {{ score }}%</h3>
+    <h4>Suggestions:</h4>
+    <ul>
+      {% for s in suggestions %}
+        <li>{{ s }}</li>
+      {% endfor %}
+    </ul>
+    <h4>Extracted Resume Text:</h4>
+    <pre>{{ resume_text }}</pre>
+  {% endif %}
+</body>
+</html>
