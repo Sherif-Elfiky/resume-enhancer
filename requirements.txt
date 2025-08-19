@@ -3,3 +3,4 @@ PyPDF2
 transformers
 sentence-transformers
 torch
+gradio_client>=1.3.0
