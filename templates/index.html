@@ -24,5 +24,20 @@
     <p class="score-value">{{ sim_score }}%</p>
   </div>
   {% endif %}
+
+  {% if sim_score_gemini is not none %}
+<div class="score-container">
+  <h3>Gemini API Similarity Score</h3>
+  <p class="score-value">{{ sim_score_gemini }}%</p>
+</div>
+{% endif %}
+
+{% if resume_suggestions %}
+<div class="suggestions-container">
+  <h3>Gemini Suggested Improvements</h3>
+  <p>{{ resume_suggestions }}</p>
+</div>
+{% endif %}
+
 </body>
 </html>
