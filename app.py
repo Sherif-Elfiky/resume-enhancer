@@ -24,7 +24,9 @@ def extract_text_from_pdf(pdf_file) -> str:
 
 def get_gemini_score(resume_text: str, job_desc: str) -> float:
     prompt = f"""
-    Compare the following resume to the job description and return ONLY a similarity score (0-100).
+    On a scale of 0 to 100, how well does the resume match the job description? 
+    Only return the number, nothing else.
+
 
     Resume:
     {resume_text}
